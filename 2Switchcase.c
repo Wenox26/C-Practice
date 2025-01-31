@@ -16,8 +16,6 @@ int main(){
     printf("\n\n1.ADD, 2.SUBTRACT, 3. MULT, 4. DIVIDE");
     printf("\n\nEnter operator: ");
     scanf("%d", &op);
-    
-
 
     //INPUT
     printf("\nEnter first number: ");
@@ -25,6 +23,8 @@ int main(){
 
     printf("Enter second numeber: ");
     scanf("%f", &num2);
+
+
 
     //OPERATOR CHOICES
     switch (op)
