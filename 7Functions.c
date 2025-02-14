@@ -1,7 +1,7 @@
 //FUNCTIONS
 #include <stdio.h>
 
-
+void displayMenu();
 //Functions: 
 //Is a block or set of code that has specific nga trabaho and later be called to be executed
 

@@ -3,6 +3,39 @@
 
 //ZODIAC FUNCTIONS
 //I 
+const char* zodiacSigns(int day, int month);
+
+int main() {
+    int month, day;
+    char choice;
+
+    printf("\n\nWELCOME TO ZODIAC SIGN IDENTIFIER");
+
+    do {
+        // MONTH AND DAY USER INPUT
+        printf("\nEnter month: ");
+        scanf("%d", &month);
+
+        printf("Enter day: ");
+        scanf("%d", &day);
+
+        // FUNCTION CALL
+        const char* zodiac = zodiacSigns(day, month);
+
+        printf("Your Zodiac Sign is %s.\n", zodiac);
+
+        // ASK USER IF THEY WANT TO CONTINUE
+        printf("\n[Do you want to continue? (y/n)]: ");
+        scanf(" %c", &choice);
+
+    } while (choice == 'y' || choice == 'Y');
+
+    printf("\nTHANK YOU FOR USING ZODIAC SIGN IDENTIFIER");
+    printf("\nPROGRAMMED BY: Owen M. Jerusalem BSIT-1D");
+
+    return 0;
+}
+
 const char* zodiacSigns(int day, int month){
     
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18)){//
@@ -44,35 +77,4 @@ const char* zodiacSigns(int day, int month){
     else{
         return "not in the options[INVALID INPUT], please try again";
     }
-}
-
-int main() {
-    int month, day;
-    char choice;
-
-    printf("\n\nWELCOME TO ZODIAC SIGN IDENTIFIER");
-
-    do {
-        // MONTH AND DAY USER INPUT
-        printf("\nEnter month: ");
-        scanf("%d", &month);
-
-        printf("Enter day: ");
-        scanf("%d", &day);
-
-        // FUNCTION CALL
-        const char* zodiac = zodiacSigns(day, month);
-
-        printf("Your Zodiac Sign is %s.\n", zodiac);
-
-        // ASK USER IF THEY WANT TO CONTINUE
-        printf("\n[Do you want to continue? (y/n)]: ");
-        scanf(" %c", &choice);
-
-    } while (choice == 'y' || choice == 'Y');
-
-    printf("\nTHANK YOU FOR USING ZODIAC SIGN IDENTIFIER");
-    printf("\nPROGRAMMED BY: Owen M. Jerusalem BSIT-1D");
-
-    return 0;
 }
